@@ -1,0 +1,55 @@
+{
+  "name": "testify-cypressio-leankoala",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cypress open",
+    "test": "cypress run",
+    "lint": "eslint .",
+    "prettier": "prettier --write --ignore-unknown './**/*.{js,ts,json}'",
+    "prettier:check": "prettier --check --ignore-unknown './**/*.{js,ts,json}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nevercodealone/testify-cypressio-leankoala.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nevercodealone/testify-cypressio-leankoala/issues"
+  },
+  "homepage": "https://github.com/nevercodealone/testify-cypressio-leankoala#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.3",
+    "cypress": "^9.3.1",
+    "cypress-wait-until": "^1.7.1",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-cypress": "^2.11.1",
+    "husky": "^4.3.0",
+    "imap-simple": "^5.0.0",
+    "lint-staged": "^10.4.0",
+    "lodash": "^4.17.20",
+    "mailparser": "^3.0.0",
+    "node-xlsx": "^0.15.0",
+    "p-retry": "^4.2.0",
+    "prettier": "2.1.2",
+    "typescript": "^4.5.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.ts": "eslint",
+    "**/*.{ts,js,json}": "prettier --write --ignore-unknown"
+  },
+  "dependencies": {
+    "@typescript-eslint/parser": "^4.8.2"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "env": {
+    "URL": "https://sulu.rocks"
+  },
+  "nodeVersion": "system",
+  "viewportWidth": 1280,
+  "viewportHight": 1000,
+  "defaultCommandTimeout": 15000,
+  "videoCompression": false
+}

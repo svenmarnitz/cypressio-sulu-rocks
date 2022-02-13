@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "lib": ["es5", "dom", "dom.iterable", "esnext"],
+    "types": ["cypress", "cypress-wait-until"],
+    "strict": true /* Enable all strict type-checking options. */,
+    "moduleResolution": "node"
+  },
+  "include": ["**/*.ts", "cypress/plugins/index.js"]
+}
