@@ -5,6 +5,10 @@ export default class BasePage {
     return `${Cypress.env('URL')}${this.path}`;
   }
 
+  get navigationMainItems() {
+    return cy.get('#navigation .navbar__item');
+  }
+
   visit(link = '') {
     if (link != '') {
       link = `${Cypress.env('URL')}${link}`;
