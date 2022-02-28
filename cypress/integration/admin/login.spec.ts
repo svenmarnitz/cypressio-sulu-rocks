@@ -1,4 +1,4 @@
-import {adminPage, loginPage} from '../../support/pages';
+import { adminPage, loginPage } from '../../support/pages';
 
 describe('Validate login and logout', () => {
   beforeEach(() => {

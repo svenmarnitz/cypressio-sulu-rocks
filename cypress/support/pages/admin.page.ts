@@ -11,7 +11,7 @@ export class AdminPage extends BasePage {
   }
 
   get logout() {
-    return cy.get('body').contains('Abmelden');
+    return cy.get('body').contains('Log out');
   }
 }
 

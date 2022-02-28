@@ -12,11 +12,11 @@ export class LoginPage extends BasePage {
   }
 
   get inputUsername() {
-    return cy.get('input[type=text]').first();
+    return cy.get('input[type=text]');
   }
 
   get inputPassword() {
-    return cy.get('input[type=text]:nth-child(2)');
+    return cy.get('input[type=password]');
   }
 }
 
