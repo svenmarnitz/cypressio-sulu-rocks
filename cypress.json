@@ -1,6 +1,8 @@
 {
   "env": {
-    "URL": "https://sulu.rocks"
+    "URL": "https://sulu.rocks",
+    "username": "admin",
+    "password": "admin"
   },
   "nodeVersion": "system",
   "viewportWidth": 1280,
