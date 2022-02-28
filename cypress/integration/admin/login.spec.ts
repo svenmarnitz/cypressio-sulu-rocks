@@ -1,4 +1,4 @@
-import {adminPage, loginPage} from '../../support/pages';
+import { adminPage, loginPage } from '../../support/pages';
 
 describe('Validate login and logout', () => {
   beforeEach(() => {
@@ -6,7 +6,7 @@ describe('Validate login and logout', () => {
     loginPage.visit();
   });
 
-  it('Login with valid data set cookie and logout remove this cookie', () => {
+  it.only('Login with valid data set cookie and logout remove this cookie', () => {
     loginPage.doLoginAsAdmin();
     cy.getCookie('SULUSESSID');
     adminPage.profileHeadline.click();
