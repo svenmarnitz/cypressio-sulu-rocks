@@ -1,6 +1,10 @@
 name: Cypress Tests
 
-on: [push, pull_request, pull_request_target]
+on: 
+  push:
+  pull_request:
+  pull_request_target:
+    types: [assigned, opened, synchronize, reopened]
 
 jobs:
   cypress-run:
