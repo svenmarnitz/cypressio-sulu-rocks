@@ -6,8 +6,13 @@
 version: 2
 updates:
   - package-ecosystem: "npm" # See documentation for possible values
+    vendor: true # Raise pull requests to update vendored dependencies that are checked in to the repository
     directory: "/" # Location of package manifests
+    labels:
+      - "npm dependencies"
+    commit-message:
+      prefix: "npm" # Prefix all commit messages with "npm"
     schedule:
-      interval: "hourly"
+      interval: "daily"
       timezone: "Europe/Berlin"
     versioning-strategy: increase
