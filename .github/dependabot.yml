@@ -16,3 +16,4 @@ updates:
       interval: "daily"
       timezone: "Europe/Berlin"
     versioning-strategy: increase
+    target-branch: "feature/dependabot"
