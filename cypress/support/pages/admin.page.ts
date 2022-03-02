@@ -13,6 +13,10 @@ export class AdminPage extends BasePage {
   get logout() {
     return cy.get('body').contains('Log out');
   }
+
+  get menuSearchButton() {
+    return cy.contains('Search');
+  }
 }
 
 export const adminPage = new AdminPage();
