@@ -22,23 +22,23 @@
   },
   "homepage": "https://github.com/nevercodealone/testify-cypressio-leankoala#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.8.2",
-    "axios": "^0.21.1",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "axios": "^0.26.0",
     "cheerio": "^1.0.0-rc.3",
-    "cypress": "^9.5.0",
+    "cypress": "^9.5.1",
     "cypress-wait-until": "^1.7.1",
-    "eslint": "^7.9.0",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-cypress": "^2.11.1",
-    "husky": "^4.3.0",
+    "husky": "^7.0.4",
     "imap-simple": "^5.0.0",
-    "lint-staged": "^10.4.0",
+    "lint-staged": "^12.3.4",
     "lodash": "^4.17.20",
     "mailparser": "^3.0.0",
-    "node-xlsx": "^0.15.0",
-    "p-retry": "^4.2.0",
-    "prettier": "2.1.2",
-    "typescript": "^4.5.5"
+    "node-xlsx": "^0.21.0",
+    "p-retry": "^5.0.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.6.2"
   },
   "husky": {
     "hooks": {
@@ -50,6 +50,6 @@
     "**/*.{ts,js,json}": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^4.8.2"
+    "@typescript-eslint/parser": "^5.13.0"
   }
 }
