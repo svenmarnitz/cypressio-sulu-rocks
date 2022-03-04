@@ -16,6 +16,15 @@ export class GlobalSearchPage extends BasePage {
     get searchInputReset() {
         return cy.get('main span[aria-label="su-times"]')
     }
+
+    clickCategoryDropdown(category: string) {
+        this.searchDropDown.click()
+        cy.get('button[class^=item--]').each((item) => {
+            if (item.text() === category) {
+                item.trigger('click')
+            }
+        })
+    }
 }
 
 export const globalSearchPage = new GlobalSearchPage();

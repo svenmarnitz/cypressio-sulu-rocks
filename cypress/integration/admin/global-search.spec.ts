@@ -39,12 +39,7 @@ describe('Use global search', () => {
     })
 
     it('click dropdown select Snippets', () => {
-        globalSearchPage.searchDropDown.click()
-        cy.get('button[class^=item--]').each((item) => {
-            if (item.text() === 'Snippets'){
-                item.trigger('click')
-            }
-        })
+        globalSearchPage.clickCategoryDropdown('Snippets')
         cy.intercept('/admin/search/query?q=*').as('search')
         globalSearchPage.searchInputField.type('Demo{enter}')
         cy.wait('@search')
@@ -52,14 +47,23 @@ describe('Use global search', () => {
     })
 
     it('click dropdown select Media', () => {
-        globalSearchPage.searchDropDown.click()
-        cy.get('button[class^=item--]').each((item) => {
-            if (item.text() === 'Media'){
-                item.trigger('click')
-            }
-        })
+        globalSearchPage.clickCategoryDropdown('Media')
+
         cy.intercept('/admin/search/query?q=*').as('search')
         globalSearchPage.searchInputField.type('Demo{enter}')
+        cy.wait('@search')
+        cy.get('div[class^=search-result--]').should('have.length', 0)
+    })
+
+    it('search again in other category', () => {
+        cy.intercept('/admin/search/query?q=*').as('search')
+
+        globalSearchPage.clickCategoryDropdown('Snippets')
+        globalSearchPage.searchInputField.type('Demo{enter}')
+        cy.wait('@search')
+        cy.get('div[class^=search-result--]').should('have.length', 2)
+
+        globalSearchPage.clickCategoryDropdown('Media')
         cy.wait('@search')
         cy.get('div[class^=search-result--]').should('have.length', 0)
     })
