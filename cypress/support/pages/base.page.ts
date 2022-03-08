@@ -32,8 +32,7 @@ export default class BasePage {
   openAdminSidebar() {
     cy.log('Open admin sidebar');
 
-    cy.get('nav').then($body => {
-      debugger;
+    cy.get('header').then($body => {
       const text = $body[0].innerHTML;
 
       // bars is not open
