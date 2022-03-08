@@ -1,4 +1,4 @@
-import {adminPage, globalSearchPage, loginPage} from '../../support/pages';
+import { adminPage, globalSearchPage, loginPage } from '../../support/pages';
 
 describe('Use global search', () => {
   beforeEach(() => {
@@ -28,21 +28,21 @@ describe('Use global search', () => {
   it('search in everything for Blog per {enter}', () => {
     globalSearchPage.searchInputField.type('Blog{enter}');
     cy.wait('@search');
-    cy.get('div[class^=search-result--]').should('be.gt', 0);
+    cy.get('div[class^=search-result--]').should('have.length.gt', 0);
   });
 
   it('search in everything for Blog per button', () => {
     globalSearchPage.searchInputField.type('Blog');
     globalSearchPage.searchIcon.click();
     cy.wait('@search');
-    cy.get('div[class^=search-result--]').should('be.gt', 0);
+    cy.get('div[class^=search-result--]').should('have.length.gt', 0);
   });
 
   it('click dropdown select Snippets for Demo', () => {
     globalSearchPage.clickCategoryDropdown('Snippets');
     globalSearchPage.searchInputField.type('Demo{enter}');
     cy.wait('@search');
-    cy.get('div[class^=search-result--]').should('', 0);
+    cy.get('div[class^=search-result--]').should('have.length.gt', 0);
   });
 
   it('click dropdown select Media for Demo', () => {
@@ -56,7 +56,7 @@ describe('Use global search', () => {
     globalSearchPage.clickCategoryDropdown('Snippets');
     globalSearchPage.searchInputField.type('Demo{enter}');
     cy.wait('@search');
-    cy.get('div[class^=search-result--]').should('have.length', 2);
+    cy.get('div[class^=search-result--]').should('have.length.gt', 0);
 
     globalSearchPage.clickCategoryDropdown('Media');
     cy.wait('@search');
