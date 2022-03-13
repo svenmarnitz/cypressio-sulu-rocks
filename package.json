@@ -22,14 +22,13 @@
   },
   "homepage": "https://github.com/nevercodealone/testify-cypressio-leankoala#readme",
   "devDependencies": {
+    "@typescript-eslint/parser": "^5.13.0",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "axios": "^0.26.0",
     "cheerio": "^1.0.0-rc.3",
-    "cypress": "^9.5.1",
-    "cypress-wait-until": "^1.7.1",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
     "imap-simple": "^5.0.0",
     "lint-staged": "^12.3.4",
@@ -50,6 +49,8 @@
     "**/*.{ts,js,json}": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^5.13.0"
+    "cypress": "^9.5.1",
+    "cypress-wait-until": "^1.7.1",
+    "axios": "^0.26.0"
   }
 }
