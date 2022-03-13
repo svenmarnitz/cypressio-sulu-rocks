@@ -7,7 +7,7 @@
     "module": "amd",
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "target": "esnext",
+    "target": "es2021",
     "lib": ["esnext", "dom", "dom.iterable"],
     "types": ["cypress", "cypress-wait-until", "node"],
     "allowSyntheticDefaultImports": true,
