@@ -1,4 +1,4 @@
-import { adminPage, globalSearchPage, loginPage } from '../../support/pages';
+import {adminPage, globalSearchPage, loginPage} from '../../support/pages';
 
 describe('Use global search', () => {
   beforeEach(() => {
